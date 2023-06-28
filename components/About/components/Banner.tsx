@@ -100,7 +100,7 @@ const Banner = () => {
           ref={parallaxFront.ref}
         ></div>
         <div className={cx(style.banner__text, style.banner__front__text)}>
-          Chill
+          <h2>Chill</h2>
         </div>
       </div>
       <div className={cx(style.banner, style.banner__back)}>
@@ -109,7 +109,7 @@ const Banner = () => {
           ref={parallaxBack.ref}
         ></div>
         <div className={cx(style.banner__text, style.banner__back__text)}>
-          Work
+          <h2>Work</h2>
         </div>
       </div>
     </div>

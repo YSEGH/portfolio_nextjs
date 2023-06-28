@@ -1,5 +1,7 @@
-import React from 'react';
+import React from "react";
 
-const NotFound: React.FC = () => <h1>404 - Page Not Found</h1>;
+const index = () => {
+  return <div>404</div>;
+};
 
-export default NotFound;
+export default index;

@@ -1,0 +1,211 @@
+/* VARIABLES */
+@value --white: #ffffff;
+@value --black: #000000;
+@value --blue: #000000;
+@value --red: #ff5a35;
+@value --light-grey: #d0d0d0;
+@value --font-grey: #333333;
+@value --font-lightgrey: #777771;
+
+/* FORM CONTACT */
+.form__contact {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+}
+/* GLOBAL */
+.form__col--25 {
+  width: 33.33%;
+}
+.form__col--50 {
+  width: 48%;
+}
+.form__col--100 {
+  width: 100%;
+}
+@media screen and (max-width: 725px) {
+  .form__col--25,
+  .form__col--50 {
+    width: 100%;
+  }
+}
+/* INPUT */
+.form__input_wrapper input:-webkit-autofill,
+.form__input_wrapper input:-webkit-autofill:hover,
+.form__input_wrapper input:-webkit-autofill:focus,
+.form__input_wrapper input:-webkit-autofill:active {
+  background-color: transparent;
+  -webkit-box-shadow: 0 0 0 30px --white inset !important;
+}
+/* COL */
+.form__col {
+  height: auto;
+  padding: 0;
+  margin-bottom: 0;
+}
+.form__col--hidden {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* FIELD WRAPPER */
+.form__field_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+/* FIELD TITLE */
+.form__field_title {
+  position: relative;
+  margin: 0;
+  height: 30px;
+  font-weight: 500;
+  font-size: 26px;
+  transition: 0.25s;
+  color: --black;
+  transform: translateY(28px);
+}
+.form__field_title.is_active {
+  font-size: 10px;
+  color: --blue;
+  transform: translateY(10px);
+}
+.form__field_title.is_error {
+  color: --red;
+}
+.form__field_title.is_error.is_active {
+  font-size: 10px;
+  transform: translateY(10px);
+}
+/* INPUT WRAPPER */
+.form__input_wrapper {
+  height: 30px;
+  min-height: 30px;
+  position: relative;
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid --black;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  transition: 0.2s linear;
+}
+.form__input_wrapper:hover,
+.form__input_wrapper.is_active {
+  border-color: --blue;
+}
+.form__input_wrapper.is_error {
+  border-color: --red;
+}
+.form__input_wrapper::after {
+  content: "";
+  height: 2px;
+  display: block;
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  background-color: --blue;
+  transition: 0.2s linear;
+  z-index: 10;
+}
+.form__input_wrapper:hover::after,
+.form__input_wrapper.is_active::after {
+  right: 0;
+  left: 0;
+}
+.form__input_wrapper.is_error::after {
+  right: 0;
+  left: 0;
+  background-color: --red;
+}
+.form__input_wrapper * {
+  height: 30px;
+  width: 100%;
+  color: --font-lightgrey;
+  border: none;
+  outline: none;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+}
+.form__input_wrapper *::placeholder {
+  width: 100%;
+}
+.form__input_wrapper.is_active input {
+  border-color: --blue;
+  color: --black;
+  font-size: 18px;
+}
+.form__input_wrapper.is_error input,
+.form__input_wrapper.is_error textarea {
+  border-color: --red;
+  color: --red;
+}
+.form__input_wrapper input::placeholder {
+  color: transparent;
+}
+/* TEXTAREA */
+.form__input_wrapper--textarea {
+  height: auto;
+}
+.form__input_wrapper--textarea textarea {
+  min-height: 0;
+  padding-bottom: 5px;
+  max-height: 15rem;
+  line-height: 22px;
+  resize: none;
+  color: --black;
+  font-size: 18px;
+}
+/* MESSAGE */
+.form__field_message {
+  height: 20px;
+}
+.form__field_message p {
+  font-size: 11px;
+  margin-top: 3px;
+  margin-bottom: 0;
+  color: --grey-font;
+  font-weight: 400;
+}
+.form__field_message.is_error p {
+  color: --red;
+}
+/* REQUIRED FIELD */
+.form__field_required {
+  position: absolute;
+  top: 0;
+  right: -0.5rem;
+  font-size: 12px;
+  color: --red;
+  margin-left: 0.25rem;
+}
+/* SUBMIT BUTTON */
+.form__submit {
+  margin: 1rem 0 2rem;
+  width: 100%;
+}
+.form__submit button {
+  background-color: transparent;
+  color: --black;
+  border: none;
+  height: 50px;
+  padding: 0;
+  font-size: 26px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

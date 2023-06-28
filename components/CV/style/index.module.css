@@ -1,0 +1,42 @@
+.curriculum__item {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+}
+.curriculum__item canvas {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.curriculum__item__content {
+  padding: 3rem 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: fit-content;
+}
+.curriculum__item__content h4 {
+  color: #000000;
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+}
+.item__time {
+  margin-right: 8rem;
+}
+.item__time h4 {
+  text-transform: uppercase;
+}
+.item__job h4 {
+  margin-bottom: 0.5rem;
+}
+.item__job p {
+  font-size: 18px;
+  margin: 0;
+  color: #000000;
+  font-weight: 300;
+}

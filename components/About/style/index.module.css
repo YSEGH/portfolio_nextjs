@@ -115,3 +115,12 @@
 .banner__back__image {
   background-image: url("/assets/bg-woman.jpg");
 }
+.banner__text {
+  height: 100% !important;
+  justify-content: flex-start !important;
+  align-items: flex-end !important;
+  color: #ffffff;
+}
+.banner__front__text {
+  color: #000000;
+}
